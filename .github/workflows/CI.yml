@@ -28,7 +28,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         working-directory: ./packages/generator
-        run: npm ci
+        run: npm i
       - name: Run Tests 🧪
         working-directory: ./packages/generator
         run: npm test
