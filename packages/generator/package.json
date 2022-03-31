@@ -1,7 +1,7 @@
 {
   "name": "@johannes.schobel/prisma-generator-crud-services",
   "description": "Automagically generates a CRUD Service for your Prisma Models",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {
