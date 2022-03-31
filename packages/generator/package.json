@@ -1,5 +1,5 @@
 {
-  "name": "@johannes.schobel/prisma-generator-crud-services",
+  "name": "prisma-generator-crud-services",
   "description": "Automagically generates a CRUD Service for your Prisma Models",
   "version": "1.0.0",
   "main": "dist/generator.js",
