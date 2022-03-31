@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/johannesschobel/prisma-generator-crud-services/compare/v1.0.1...v1.0.2) (2022-03-31)
+
+
+### Bug Fixes
+
+* change name ([8d7a681](https://github.com/johannesschobel/prisma-generator-crud-services/commit/8d7a6812fd2fdc7309cf28564014319dc96f0c9a))
+
 ## [1.0.1](https://github.com/johannesschobel/prisma-generator-crud-services/compare/v1.0.0...v1.0.1) (2022-03-31)
 
 
