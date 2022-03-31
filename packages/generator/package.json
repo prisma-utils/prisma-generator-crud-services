@@ -1,7 +1,7 @@
 {
-  "name": "prisma-generator-crud-services",
-  "description": "Provide a description about your generator",
-  "version": "1.0.0",
+  "name": "@johannes.schobel/prisma-generator-crud-services",
+  "description": "Automagically generates a CRUD Service for your Prisma Models",
+  "version": "0.0.1",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {
@@ -40,7 +40,7 @@
     "type": "git",
     "url": "Repo link here"
   },
-  "author": "Your Name <Your Email>",
+  "author": "Johannes Schobel",
   "keywords": [
     "prisma",
     "prisma2",
