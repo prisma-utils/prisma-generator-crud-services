@@ -28,8 +28,11 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
+        run: npm install
+
+      - name: Install Dependencies
         working-directory: ./packages/generator
-        run: npm i
+        run: npm install
 
       - name: Tests
         working-directory: ./packages/generator

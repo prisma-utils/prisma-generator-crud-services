@@ -37,9 +37,14 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install Dependencies
+        run: npm install
+
+      - name: Install Dependencies
         working-directory: ./packages/generator
-        run: npm i
+        run: npm install
 
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
