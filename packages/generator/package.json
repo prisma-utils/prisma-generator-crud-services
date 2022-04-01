@@ -15,7 +15,7 @@
     "dev": "npx tsc -w",
     "clean": "rimraf dist/",
     "build": "npx tsc",
-    "prepack": "yarn build",
+    "prepack": "npm build",
     "test": "jest"
   },
   "dependencies": {
