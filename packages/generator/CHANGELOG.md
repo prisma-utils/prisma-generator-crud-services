@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/johannesschobel/prisma-generator-crud-services/compare/v1.0.3...v1.1.0) (2022-04-01)
+
+
+### Bug Fixes
+
+* run prettier on project ([90422bf](https://github.com/johannesschobel/prisma-generator-crud-services/commit/90422bf9fe04684527f5440895472543b0b49087))
+
+
+### Features
+
+* add publish workflow ([fb6773c](https://github.com/johannesschobel/prisma-generator-crud-services/commit/fb6773c3b00384aae8e3bf8f4d553dc4c83129fe))
+* work in progress ([11bcaef](https://github.com/johannesschobel/prisma-generator-crud-services/commit/11bcaef3ed8abd14f6f8a00522d4c6de142a5b79))
+
 ## [1.0.3](https://github.com/johannesschobel/prisma-generator-crud-services/compare/v1.0.2...v1.0.3) (2022-03-31)
 
 
