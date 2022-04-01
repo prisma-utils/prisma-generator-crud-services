@@ -18,8 +18,11 @@ jobs:
           node-version: 16
 
       - name: Install Dependencies
+        run: npm install
+
+      - name: Install Dependencies
         working-directory: ./packages/generator
-        run: npm i
+        run: npm install
 
       - name: Run Tests
         working-directory: ./packages/generator
