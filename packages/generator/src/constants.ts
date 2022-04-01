@@ -1,1 +1,1 @@
-export const GENERATOR_NAME = 'prisma-generator-crud-services'
+export const GENERATOR_NAME = 'prisma-generator-crud-services';
