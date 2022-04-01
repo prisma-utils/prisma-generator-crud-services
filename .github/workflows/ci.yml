@@ -29,7 +29,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: ./packages/generator
-        run: npm ci
+        run: npm i
 
       - name: Tests
         working-directory: ./packages/generator
