@@ -1,7 +1,7 @@
 {
-  "name": "prisma-generator-crud-services",
+  "name": "@trackyourhealth/prisma-generator-crud-services",
   "description": "Automagically generates a CRUD Service for your Prisma Models",
-  "version": "1.1.0",
+  "version": "0.0.1",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {
