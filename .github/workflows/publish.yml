@@ -46,7 +46,9 @@ jobs:
         working-directory: ./packages/generator
         run: npm install
 
-      - run: npm publish
+      - name: Publish
+        working-directory: ./packages/generator
+        run: npm semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
