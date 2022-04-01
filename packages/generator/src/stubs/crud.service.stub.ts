@@ -1,14 +1,17 @@
-export const defaultServiceStub = `/* 
+export const defaultCrudServiceStub = `/* 
 -----------------------------------------------------
 THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 ----------------------------------------------------- 
 */
+
 import { Injectable } from '@nestjs/common';
 import { Prisma, PrismaClient } from '@prisma/client';
 
 @Injectable()
 export class __Class__CrudService {
+  
   constructor(private readonly prismaClient: PrismaClient) {}
+
   async aggregate(data: Prisma.__Class__AggregateArgs) {
     try {
       const result = await this.prismaClient.__class__.aggregate(data);
@@ -93,7 +96,7 @@ export class __Class__CrudService {
         totalCount: count,
         count: items.length,
         totalPages: Math.ceil(count / data.take),
-        page: (data.skip / data.take) + 1,
+        page: data.skip / data.take + 1,
       },
     };
   }
@@ -115,7 +118,7 @@ export class __Class__CrudService {
       throw new Error(exception);
     }
   }
-  
+
   async upsert(data: Prisma.__Class__UpsertArgs) {
     try {
       const result = await this.prismaClient.__class__.upsert(data);

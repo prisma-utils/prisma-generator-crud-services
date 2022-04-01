@@ -1,0 +1,2 @@
+foo Post
+bar post

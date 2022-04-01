@@ -1,6 +1,8 @@
-generator custom_generator {
-  provider = "node ../../node_modules/prisma-generator-crud-services"
-  output   = "../types"
+generator crudservices {
+  provider   = "node ../../node_modules/prisma-generator-crud-services"
+  output     = "./../crud-services"
+  stubFile   = "./../../stubs/crud.service.stub"
+  barrelFile = true
 }
 
 datasource db {
@@ -12,6 +14,16 @@ model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
+
+  posts Post[]
+}
+
+model Post {
+  id          String  @id @default(uuid())
+  content     String
+  description String?
+  user        User?   @relation(fields: [userId], references: [id])
+  userId      Int?
 }
 
 enum NotificationType {
