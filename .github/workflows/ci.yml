@@ -1,6 +1,3 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: CI
 
 on:
@@ -26,50 +23,47 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install Top Level Dependencies
-        run: npm install
+      - uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Install Dependencies
+      - name: Install dependencies
         working-directory: ./packages/generator
-        run: npm install
+        run: npm ci
 
-      - name: Run Tests
+      - name: Run Tests 🧪
         working-directory: ./packages/generator
-        run: npm test
+        run: npm run test
 
   Publish:
     runs-on: ubuntu-latest
     needs:
       - Test
     if: ${{ github.ref == 'refs/heads/main' }}
+
     steps:
       - uses: actions/checkout@v3
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.org
 
-      - name: Install Top Level Dependencies
-        run: npm install
+      - uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Install Dependencies
+      - name: Install dependencies
         working-directory: ./packages/generator
-        run: npm install
+        run: npm ci
 
-      - name: Publish to NPM
-        working-directory: ./packages/generator
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Semantic Release
+      - name: Publish 🚀
         working-directory: ./packages/generator
         run: npx semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
