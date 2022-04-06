@@ -1,2 +1,0 @@
-foo User
-bar user

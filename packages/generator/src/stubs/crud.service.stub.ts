@@ -7,6 +7,11 @@ THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 import { Injectable } from '@nestjs/common';
 import { Prisma, PrismaClient } from '@prisma/client';
 
+const defaultPaginationOptions = {
+  take: 20,
+  skip: 0,
+};
+
 @Injectable()
 export class __Class__CrudService {
   
@@ -16,7 +21,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.aggregate(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -25,7 +30,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.count(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -34,7 +39,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.create(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -43,7 +48,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.delete(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -52,7 +57,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.deleteMany(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -61,7 +66,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.findFirst(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -70,7 +75,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.findMany(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -79,7 +84,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.findUnique(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -89,6 +94,9 @@ export class __Class__CrudService {
       this.prismaClient.__class__.findMany(data),
       this.prismaClient.__class__.count({ where: data.where }),
     ]);
+
+    data.take = data.take || defaultPaginationOptions.take;
+    data.skip = data.skip || defaultPaginationOptions.skip;
 
     return {
       data: items,
@@ -105,7 +113,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.update(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -114,7 +122,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.updateMany(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }
@@ -123,7 +131,7 @@ export class __Class__CrudService {
     try {
       const result = await this.prismaClient.__class__.upsert(data);
       return result;
-    } catch (exception) {
+    } catch (exception: any) {
       throw new Error(exception);
     }
   }

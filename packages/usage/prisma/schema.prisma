@@ -1,7 +1,7 @@
 generator crudservices {
   provider   = "node ../../node_modules/prisma-generator-crud-services"
   output     = "./../crud-services"
-  stubFile   = "./../../stubs/crud.service.stub"
+  // stubFile   = "./../../stubs/crud.service.stub"
   barrelFile = true
 }
 
