@@ -57,7 +57,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
-        working-directory: ./packages/generator
+        # working-directory: ./packages/generator
         run: npm ci
 
       - name: Publish 🚀
