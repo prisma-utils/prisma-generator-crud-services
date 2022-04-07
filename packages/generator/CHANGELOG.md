@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/prisma-utils/prisma-generator-crud-services/compare/v1.0.0...v1.0.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* add npmrc file ([a949a37](https://github.com/prisma-utils/prisma-generator-crud-services/commit/a949a373aa50ff2f580cd2b35660c89420e9ea9b))
+
 # 1.0.0 (2022-04-07)
 
 
