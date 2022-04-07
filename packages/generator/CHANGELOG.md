@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/prisma-utils/prisma-generator-crud-services/compare/v1.1.2...v1.1.3) (2022-04-07)
+
+
+### Bug Fixes
+
+* change repo ([c397d67](https://github.com/prisma-utils/prisma-generator-crud-services/commit/c397d67159e71a45537adf9b946aa8073dea679c))
+
 ## [1.1.2](https://github.com/johannesschobel/prisma-generator-crud-services/compare/v1.1.1...v1.1.2) (2022-04-06)
 
 
