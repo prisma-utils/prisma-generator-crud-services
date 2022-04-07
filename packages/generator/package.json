@@ -43,7 +43,10 @@
     "type": "git",
     "url": "https://github.com/prisma-utils/prisma-generator-crud-services"
   },
-  "author": "Johannes Schobel",
+  "author": {
+    "name": "Johannes Schobel",
+    "url": "https://github.com/johannesschobel"
+  },
   "keywords": [
     "prisma",
     "prisma2",
