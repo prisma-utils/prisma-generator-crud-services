@@ -1,7 +1,7 @@
 {
-  "name": "prisma-generator-crud-services",
+  "name": "@prisma-utils/prisma-generator-crud-services",
   "description": "Automagically generates a CRUD Service for your Prisma Models",
-  "version": "1.1.2",
+  "version": "0.0.1",
   "main": "dist/generator.js",
   "license": "MIT",
   "bin": {
@@ -38,10 +38,10 @@
     "@semantic-release/git": "^10.0.1",
     "semantic-release": "^18.0.1"
   },
-  "homepage": "https://github.com/johannesschobel/prisma-generator-crud-services",
+  "homepage": "https://github.com/prisma-utils/prisma-generator-crud-services",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johannesschobel/prisma-generator-crud-services"
+    "url": "https://github.com/prisma-utils/prisma-generator-crud-services"
   },
   "author": "Johannes Schobel",
   "keywords": [
